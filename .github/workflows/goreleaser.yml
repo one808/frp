@@ -37,8 +37,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload release artifacts
+      - name: List release packages
+        run: ls -lh ./release/packages/
+
+      - name: Upload release packages
         uses: actions/upload-artifact@v4
         with:
-          name: frp-binaries
-          path: ./release/
+          name: frp-packages
+          path: ./release/packages/*
