@@ -1,5 +1,7 @@
+version: 2
 builds:
-  - skip: true
+  - id: noop
+    skip: true
 checksum:
   name_template: '{{ .ProjectName }}_sha256_checksums.txt'
   algorithm: sha256
